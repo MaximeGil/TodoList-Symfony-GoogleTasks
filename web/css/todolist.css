@@ -1,0 +1,25 @@
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    text-align: justify;
+    width: 100%; 
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+  
+  .titlecat
+  {
+      color : white; 
+      text-shadow: 1px 2px 3px rgba(0,0,0,0.5);
+      
+  }
+  
+  .headertitle
+  {
+      text-shadow: 1px 2px 3px rgba(0,0,0, 0.5);
+      margin-left: 5px; 
+  }

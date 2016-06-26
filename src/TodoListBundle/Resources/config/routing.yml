@@ -1,0 +1,50 @@
+##### ROOT #######
+todo_list_path_root:
+    path:     /
+    defaults: { _controller: TodoListBundle:List:list }
+    
+##### AUTHENTICATION #######
+todo_list_auth_callback:
+    path:     /callback
+    defaults: { _controller: TodoListBundle:Authentication:callback }
+todo_list_auth_logout:
+    path: /google/logout
+    defaults : { _controller : TodoListBundle:Authentication:disconnect }
+    
+##### TASK LIST #######
+todo_list_homepage:
+    path: /google
+    defaults: { _controller: TodoListBundle:List:list }
+todo_list_list:
+    path: /google/list
+    defaults : { _controller : TodoListBundle:List:list }
+todo_list_add:
+    path: /google/list/add
+    defaults : { _controller : TodoListBundle:List:add }
+todo_list_list_delete:
+    path: /google/list/delete/{taskList}
+    defaults : { _controller : TodoListBundle:List:delete }
+todo_list_list_update:
+    path: /google/list/update/{taskList}
+    defaults : { _controller : TodoListBundle:List:update }
+todo_list_list_showitems:
+    path: /google/list/items/{taskList}
+    defaults : { _controller : TodoListBundle:List:showItems }
+    
+##### TASK #######  
+todo_list_task_taskdelete:
+    path : /google/list/{taskList}/task/delete/{id}
+    defaults : { _controller : TodoListBundle:Task:deleteTask }
+todo_list_task_taskadd:
+    path : /google/task/add/{taskList}
+    defaults : { _controller : TodoListBundle:Task:add }
+todo_list_task_update:    
+    path : /google/task/update/{task}/{taskList}
+    defaults : { _controller : TodoListBundle:Task:updateTask }
+todo_list_task_completed:
+    path : /google/task/completed/{taskId}/{taskList}
+    defaults : { _controller : TodoListBundle:Task:completeTask }
+todo_list_task_uncompleted:
+    path : /google/task/uncompleted/{taskId}/{taskList}
+    defaults : { _controller : TodoListBundle:Task:uncompleteTask }    
+                       

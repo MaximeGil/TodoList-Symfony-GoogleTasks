@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block title %} Task List Add{% endblock %}
+{% block body %}
+    <div class="row">
+        <h4>Create your list</h4>
+    </div> 
+
+    <div class="row">
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+
+        <input class="waves-effect waves-light btn center" type="submit" value="Create" />
+        {{ form_end(form) }}
+    </div>
+
+{% endblock %}

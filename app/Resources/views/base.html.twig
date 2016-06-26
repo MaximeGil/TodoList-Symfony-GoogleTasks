@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title> TodoList : {% block title %}{% endblock %}</title>
+        {% block stylesheets %}
+        {% endblock %}
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="{{asset('css/materialize.min.css')}}"  media="screen,projection"/>
+        <link rel="icon" type="image/x-icon" href="{{ asset('/favicon.ico') }}" />
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/todolist.css') }}"/>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-wrapper   cyan lighten-2">
+                <a href="#" class="brand-logo"> TodoList - Khettab Gil </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="/google/list">Tasks List</a></li>
+                    <li><a href="/google/logout">Log Out</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            {% block body %}
+
+
+                <!-- Page Content goes here -->
+
+
+
+            {% endblock %}
+        </div>
+        {% block javascripts %}
+            <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+            <script type="text/javascript" src="{{asset('js/materialize.min.js')}}"></script>
+
+        {% endblock %}
+
+        {% block footer %}
+            <footer class="page-footer   cyan lighten-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col l6 s12">
+                            <h5 class="white-text"> TodoList Khettab Gil</h5>
+                            <p class="grey-text text-lighten-4">A todo list ( anglicism ) , or a task list or calendar, is a process that is simple and efficient to manage project tasks . These tasks may be independent or duty, however, be completed in a certain order. An IT project manager will note eg bugs to fix and dates of beginning and end of the problem. Each task can in turn require its own list of (sub) tasks , and so on . Post-it note of where you are shopping to do a rudimentary example of todo list .
+                        </div>
+                        <div class="col l4 offset-l2 s12">
+                            <h5 class="white-text">Navigation</h5>
+                            <ul>
+                                <li><a class="grey-text text-lighten-3" href="#!">Tasks List</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <div class="container">
+                        © 2016 Copyright TodoList Khettab Gil
+                    </div>
+                </div>
+            </footer>
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+{% block title %} Task List Items{% endblock %}
+{% block body %}
+
+    <div class="row">
+    </div> 
+    <div class="row">
+        <div class="col s1 offset-s12  ">
+            <a class="btn-floating btn-large waves-effect waves-light teal lighten-3" href="/google/task/add/{{taskList}}"><i class="material-icons">add</i></a>
+        </div>
+    </div>
+    <div class="row">
+        <center>
+            <div class="col s6 offset-s3  ">
+                <ul class="collection">
+
+                    <li class="collection-header"><h5>Tasks</h5></li>
+                        {% for task in tasks %} 
+                        <li class="collection-item">
+                            {% if task.status == 'needsAction' %}
+                                Task title :{{ task.title }}
+                            {% else %}
+                                Task title : <s>{{ task.title }}</s>
+                            {% endif %}
+
+                            </br>Due date : {{ task.due }}
+                            </br>Status : {{ task.status }}
+                            </br>
+                            </br><a class="waves-effect waves-light btn" href="/google/task/update/{{task.id}}/{{taskList}}">UPDATE</a>
+                            <a class="waves-effect waves-light btn" href="/google/list/{{taskList}}/task/delete/{{task.id}}">DELETE</a>
+                            {% if task.status == 'needsAction' %}
+                                <a class="waves-effect waves-light btn" href="/google/task/completed/{{task.id}}/{{taskList}}">COMPLETED</a>
+                            {%else%}
+                                <a class="waves-effect waves-light btn" href="/google/task/uncompleted/{{task.id}}/{{taskList}}">UNCOMPLETED</a>
+                            {% endif %}
+
+                        </li>
+                    {% endfor %}
+
+                </ul>
+            </div>
+        </center>
+    </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+{% block title %} Task List{% endblock %}
+{% block body %}
+<div class="row">
+</div> 
+<div class="row">
+        <div class="col s1 offset-s12  ">
+     <a class="btn-floating btn-large waves-effect waves-light teal lighten-3" href="/google/list/add"><i class="material-icons">add</i></a>
+        </div>
+</div>
+<div class="row">
+      {% for taskList in taskLists %} 
+        <div class="col s4 m4 ">
+          <div class="card deep-orange lighten-2">
+            <div class="card-content white-text">
+              <span class="card-title">{{ taskList.title }}</span>
+              <p>This is your list, you can edit, delete and view the contents thereof ; Your items will also be changed.</p>
+            </div>
+            <div class="card-action">
+                <a href='/google/list/items/{{taskList.id}}' ><span class=" grey-text text-lighten-3">Show items</span></a>
+                <a href='/google/list/update/{{taskList.id}}'><span class=" grey-text text-lighten-3">Update</span></a>
+                <a href='/google/list/delete/{{ taskList.id }}'><span class=" grey-text text-lighten-3">Delete</span></a>
+            </div>
+          </div>
+        </div>
+            
+        <div class="col s1 m1">
+        </div>
+        {% endfor %}
+      </div>
+            
+{% endblock %}

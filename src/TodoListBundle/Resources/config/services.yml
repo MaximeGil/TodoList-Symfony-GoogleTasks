@@ -1,0 +1,16 @@
+services:
+#    todo_list.example:
+#        class: TodoListBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
+     todo_list.security.authenticator:
+         class : TodoListBundle\Security\SecurityAuthenticator
+         
+     todo_list.security.access_denied:
+         class : TodoListBundle\Security\AccessDenied
+         arguments: ['@happyr.google.api.client']
+     todo_list.google.listservice:
+         class : TodoListBundle\Google\ListService
+         arguments : ['@happyr.google.api.client', '@security.token_storage']
+     todo_list.google.taskservice:
+         class : TodoListBundle\Google\TaskService
+         arguments : ['@happyr.google.api.client', '@security.token_storage']         
