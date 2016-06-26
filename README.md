@@ -1,6 +1,13 @@
 # TodoList-Symfony-GoogleTasks
 
-TodoList with Symfony and GoogleTasks (connection with oAuth2)
+Tools used :
+* [Symfony 3.0] (http://symfony.com/)
+* [Twig] (http://twig.sensiolabs.org/)
+* [HappyR Google API] (http://developer.happyr.com/symfony2-bundles/google-api-bundle)
+* [Google API] (https://developers.google.com/google-apps/tasks/)
+* [Materialize] (http://materializecss.com/)
+* [Heroku] (http://heroku.com)
+
 Demo : https://blooming-lowlands-39021.herokuapp.com/ 
 
 ## Introduction
@@ -32,12 +39,10 @@ After that, you have to change (if you want) the configuration in app/config/con
 
 * Authentication via oAuth
 * Logout
-
 * Create Task List
 * Read Task List
 * Update Task List
 * Delete Task List
-
 * Create Task
 * Read Task
 * Update Task
