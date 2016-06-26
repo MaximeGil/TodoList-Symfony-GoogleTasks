@@ -72,6 +72,6 @@ happy_r_google_api:
   application_name: KhettabGilTodoList
   oauth2_client_id: 699023151544-cbos0janekgo8csgs04kp7r6pet30r1f.apps.googleusercontent.com
   oauth2_client_secret: uhNHLstBvUZgFO71fRlRg703 
-  oauth2_redirect_uri: http://127.0.0.1:8000/callback
+  oauth2_redirect_uri: https://blooming-lowlands-39021.herokuapp.com/callback
   developer_key: AIzaSyBrj4KqPkgADZbxsgELSArsAyLFKh2bBpU
   site_name: KhettabGilTodoList
