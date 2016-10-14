@@ -8,8 +8,6 @@ Tools used :
 * [Materialize] (http://materializecss.com/)
 * [Heroku] (http://heroku.com)
 
-Demo : https://blooming-lowlands-39021.herokuapp.com/ 
-
 ## Introduction
 
 This application was created with my partner Myriam Khettab for a project during my professional degree. It allow to be connected with Google Tasks (via OAuth2).
